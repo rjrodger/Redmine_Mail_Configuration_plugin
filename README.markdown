@@ -21,18 +21,18 @@ Changes made by patch:
 
 <redmine root>\app\controllers\my_controller.rb
 
-@user.pref[:no_self_notified] = (params[:no_self_notified] == '1')
+#####@user.pref[:no_self_notified] = (params[:no_self_notified] == '1')
 
-######++ call_hook(:my_controller_new_user_preferences, { :params => params, :user_pref => @user.pref })
+####++ call_hook(:my_controller_new_user_preferences, { :params => params, :user_pref => @user.pref })
 
-if @user.save
+#####if @user.save
 
 
 <redmine root>\app\views\my\account.rhtml
 
-<p><label><%= check_box_tag 'no_self_notified', 1, @user.pref[:no_self_notified] %> <%= l(:label_user_mail_no_self_notified) %></label></p>
+#####<p><label><%= check_box_tag 'no_self_notified', 1, @user.pref[:no_self_notified] %> <%= l(:label_user_mail_no_self_notified) %></label></p>
 
-######++<%= call_hook(:mail_configurator_options, { :user_pref => @user.pref }) %>
+####++<%= call_hook(:mail_configurator_options, { :user_pref => @user.pref }) %>
 
-</div>
+#####</div>
 
