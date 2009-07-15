@@ -9,7 +9,7 @@ First option will allow sending mail notification only if user is assigned to th
 
 This plugin needs to be installed same as the Redmine instruction for plugins describes (http://www.redmine.org/wiki/1/Plugins).
 You can skip 'rake' command as there are no database migration files.
-You have to also rn the patch file from redmine_mail_configurator\patch\
+You have to also run the patch file from redmine_mail_configurator\patch\
 It will only add two hooks in your source code, so the changes are insignificant, but still you should BACKUP Your Files.
 
 ## Features
