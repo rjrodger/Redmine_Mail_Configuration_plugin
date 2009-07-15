@@ -37,4 +37,5 @@ Changes made by patch:
 	</div>
 
 
-![New configuration options][http://github.com/GOYELLO/Redmine_Mail_Configuration_plugin/blob/4190f1229e9746e897ab9dcbc819d06130dd10b1/New_mail_configuration_options.jpg]
+New configuration options
+<img>http://github.com/GOYELLO/Redmine_Mail_Configuration_plugin/blob/4190f1229e9746e897ab9dcbc819d06130dd10b1/New_mail_configuration_options.jpg</img>
