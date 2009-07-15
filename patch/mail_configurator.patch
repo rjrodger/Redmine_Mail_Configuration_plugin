@@ -1,0 +1,26 @@
+Index: app/controllers/my_controller.rb
+===================================================================
+--- app/controllers/my_controller.rb	(wersja 2793)
++++ app/controllers/my_controller.rb	(kopia robocza)
+@@ -58,6 +58,7 @@
+       @user.mail_notification = (params[:notification_option] == 'all')
+       @user.pref.attributes = params[:pref]
+       @user.pref[:no_self_notified] = (params[:no_self_notified] == '1')
++	call_hook(:my_controller_new_user_preferences, { :params => params, :user_pref => @user.pref })
+       if @user.save
+         @user.pref.save
+         @user.notified_project_ids = (params[:notification_option] == 'selected' ? params[:notified_project_ids] : [])
+Index: app/views/my/account.rhtml
+===================================================================
+--- app/views/my/account.rhtml	(wersja 2793)
++++ app/views/my/account.rhtml	(kopia robocza)
+@@ -40,6 +40,9 @@
+ <p><em><%= l(:text_user_mail_option) %></em></p>
+ <% end %>
+ <p><label><%= check_box_tag 'no_self_notified', 1, @user.pref[:no_self_notified] %> <%= l(:label_user_mail_no_self_notified) %></label></p>
++
++	<%= call_hook(:mail_configurator_options, { :user_pref => @user.pref }) %>	
++
+ </div>
+ 
+ <h3><%=l(:label_preferences)%></h3>
