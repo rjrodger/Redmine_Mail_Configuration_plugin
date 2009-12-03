@@ -1,4 +1,4 @@
-require_dependency 'issue'
+#require_dependency 'issue'
 
 module MailConfiguratorIssuePatch
       def self.included(base) # :nodoc:
